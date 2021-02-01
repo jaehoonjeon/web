@@ -1,0 +1,17 @@
+우클릭 git bash here 
+git init (이 폴더에 깃 사용)
+git remote add origin https://github.com/jhjeon-ksa/web.git
+
+git status 현재 폴더 깃 싱크 상태 보기
+
+git add . 현재 폴더 깃 변경사항 추가
+git commit -m "message"  커밋
+git push origin master    git에 PUSH
+
+---------------------------------------------------------------------------------------
+새로운 폴더에 git 가져오기
+
+우클릭 git bash here
+git init
+git remote add origin "git address"
+git pull origin master

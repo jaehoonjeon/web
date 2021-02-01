@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Full Coding</title>
+        <style>
+            html, body { font-family: "malgun gothic", dotum; text-transform: capitalize;}
+            
+            
+            /* container */
+            .container {
+                width: 960px; height: 100%; border: 5px solid red;
+                box-sizing: border-box;
+                margin: 0 auto;
+            }
+            
+            
+            /* uppermost */
+            .uppermost {
+                background-color: black; height: 50px; color: #7f7f7f;
+                text-align: center; line-height: 50px;
+                
+            }
+            .container-um {
+                width: 100%;
+                border: 0px;
+            }
+            
+            
+            
+            /* header */
+            header {
+                background-color: gray; height: 100px; color: #444;
+                text-align: center; line-height: 100px;
+            }
+            .container-h {
+                border: 0px;
+            }
+            
+            /* nav */
+            nav {
+                background-color: skyblue; height: 500px; color: #000;
+                text-align: center; line-height: 500px;
+            }
+            .container-n {
+                border: 0px;
+            }
+            
+            /* main */
+            main {
+               background-color: navy; height: 400px; color: skyblue;
+               text-align: center; line-height: 400px;
+            }
+            .main-inner-box {
+                border: 0px solid;
+                position: relative;
+            }
+            .container-m-3box {
+                border: 0px solid; height: 300px; line-height: 300px;
+                overflow: hidden;
+                position: absolute; left: 85px; top: -120px;
+            }
+            
+            aside#left {
+                background-color: black; width: 250px;
+                float: left;
+                margin-right: 20px;
+            }
+            article {
+                background-color: brown; width: 250px;
+                float: left;
+                margin-right: 20px;
+            }
+            aside#right {
+                background-color: black; width: 250px;
+                float: left;
+            }
+            
+            /* content */
+            .content {
+                background-color: #fcfcfc; height: 800px; color:#000;
+                text-align: center; line-height: 800px;
+            }
+            .container-c {
+                border: 0px;
+            }
+            
+            /* footermenu */
+            .footermenu {
+                background-color: gray; height: 50px; color: #444;
+                text-align: center; line-height: 50px;
+            }
+            .container-fm {
+                border: 0px;
+            }
+            
+            /* footer */
+            footer {
+                background-color: black; height: 300px; color: #7f7f7f;
+                text-align: center; line-height: 300px;
+            }
+            .container-f {
+                border: 0px;
+            }
+            
+        </style>
+        <script>
+        </script>
+    </head>
+    <body>
+        
+        <div class="uppermost">
+            <div class="container container-um">
+                uppermost
+            </div>
+        </div><!-- uppermost -->
+        
+        <header>
+            <div class="container container-h">
+                header
+            </div><!-- inner-div-box -->
+        </header><!-- header -->
+        
+        <nav>
+            <div class="container container-n">
+                nav
+            </div><!-- inner-div-box -->
+        </nav><!-- nav -->
+        
+        <main>
+            <div class="container main-inner-box">
+                <div class="container container-m-3box">
+                    <aside id="left">left</aside>
+                    <article>center</article>
+                    <aside id="right">right</aside>
+                </div><!-- inner-div-box -->
+            </div><!-- main-inner-box -->
+        </main><!-- main -->
+        
+        <div class="content">
+            <div class="container container-c">
+                content
+            </div><!-- inner-div-box -->
+        </div><!-- content -->
+        
+        <div class="footermenu">
+            <div class="container container-fm">
+                footermenu
+            </div><!-- inner-div-box -->
+        </div><!-- footermenu -->
+        
+        <footer>
+            <div class="container container-f">
+                footer
+            </div><!-- inner-div-box -->
+        </footer><!-- footer -->
+    </body>
+</html>

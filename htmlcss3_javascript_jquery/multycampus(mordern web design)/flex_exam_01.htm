@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Flexbox</title>
+        <style>
+            /*
+                1. 기본적으로 부모 > 자식들의 관계를 통해서
+                   속성의 특징들이 많이 결정된다
+                2. 부모(container), 자식(items)
+                3. 최신 브라우저 위주로 지원.
+                    - IE 10 이상(업데이트 유무에 따라 다름)
+            
+                4. 정렬과 관련된 기능들이 굉장히 좋다.
+            */
+            
+            * {margin:0; padding: 0;}
+            
+            .container {
+                display: flex;
+                background-color: gray;
+                
+                /* alignment 수평 정렬  */
+                /*
+                    [1] : 좌우 끝단 배치 + 가운데(사이) 배치
+                */
+                
+                justify-content: space-between;
+                
+                /*
+                    [2] : 주변 박스를 기준으로 공간 분배.
+                */
+                
+                justify-content: space-around;
+                
+                /*
+                    [3] : 여백을 균등하게 갖는다
+                */
+                
+                justify-content: space-evenly;
+                
+                /*
+                    [4] : 왼쪽 정렬
+                */
+                
+                justify-content: flex-start;
+                
+                /*
+                    [5] : 오른쪽 정렬
+                */
+                
+                justify-content: flex-end;
+                
+                /*
+                    [6] : 가운데 정렬
+                */
+                
+                justify-content: center;
+            }
+            
+            .item {
+                border: 1px solid black;
+                background-color: red;
+                width: 100px; height: 100px;
+                margin: 10px;
+                text-align: center;
+                line-height: 100px;
+            }
+            
+        </style>
+        <script>
+        </script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="item">Box1</div>
+            <div class="item">Box2</div>
+            <div class="item">Box3</div>
+        </div>
+    </body>
+</html>

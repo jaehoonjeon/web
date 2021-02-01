@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>Mordern WebSite & Layout Design</title>
+        <style>
+            /*
+            이미지를 float 로 띄웠을때 하단의 div가 안딸려 오게 하기 위해
+            Box에 clear: left, both로 처리
+            */
+            html, body { height: 100%; background: gray;}
+            * {margin: 0; padding: 0; overflow-y: hidden}
+            
+            img{
+                float: left;
+            }
+            .box1{
+                background-color: #80FFFF; width: 600px;
+                margin: 10px auto;
+                /* [1] 앞(이미지)의 clear로 float 를 해제 시킴 */
+                /* clear: left; */
+            }
+            
+            /* [2] 박스 설명글이 있는경우 clearfix에 content를 이용 */
+            .clearfix::after{
+                content: "[이미지설명] 닭"; display: block; clear: both;
+            }
+            
+            
+        </style>
+        <script></script>
+    </head>
+    
+    <body>
+        <div class="clearfix">
+            <img src="Hen.jpg" width="250">
+        </div>
+        <div class="box1">
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+        </div>
+    </body>
+</html>

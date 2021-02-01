@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Flexbox</title>
+        <style>
+           
+            
+            * {margin:0; padding: 0;}
+            
+            .container {
+                display: flex;
+                background-color: gray;
+            }
+           
+            .item {
+                background-color: tomato;
+                padding: 5px;
+                margin: 5px;
+                width: 50px;
+                text-align: center;
+                color: white; font-weight: bold;
+                list-style: none;
+                line-height: 50px;
+                /* font-size: 2em; */
+            }
+            
+            .flex-center {
+                /* align-items: stretch; 기본값 */
+                align-items: center;
+            }
+            .baseline {
+                /* align-items: stretch; 기본값 */
+                align-items: baseline;
+            }
+            
+        </style>
+        <script>
+        </script>
+    </head>
+    <body>
+        <ul class="container flex-center">
+            <li class="item">1<br>111</li>
+            <li class="item">2</li>
+            <li class="item">3<br>33<br>333</li>
+            <li class="item">4</li>
+        </ul>
+    </body>
+</html>

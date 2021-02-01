@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <style>
+    </style>
+    <script src="jquery-3.5.1.js"></script>
+</head>
+
+<body>
+    <h1>clickMe</h1>
+    <a href="http://hanbit.co.kr">Hello</a>
+    <h2>click - Make a Child</h2>
+</body>
+    <script>
+        /////////////////////////////////////////////////////////////////
+        
+        $("h1").click(function(event){
+            //alert(event.currentTarget)
+            //$(event.currentTarget).html("clicked!")
+            $(this).html("clicked!");
+            $(this).css("color", "red");
+        });
+
+        $("a").click(function(evet){
+            //event.preventDefault();
+            //event.stopPropagation();
+            //위 두개를 return false로 대체 할 수 있다.
+            return false;
+        })
+
+        //이벤트 강제 호출
+        //$("h1").click(); 
+
+        /////////////////////////////////////////////////////////////////
+
+        $("a").on("click", 100, function(event){})
+        $("h1").on({
+            click: function() {  $("h1").html("click") },
+            dblclick: function() {  $("h1").html("dblclick") },
+            mouseenter: function() { $("h1").html("mouse enter") },
+            mouseleave: function() { $("h1").html("mouse leave") }
+        })
+
+        /////////////////////////////////////////////////////////////////
+
+        //이벤트로 생성되는 h2에도 이벤트 핸들러를 적용할 수 있다
+        $("body").on("click", "h2", function() {
+            $("<h2></h2>").html("this is child && also can make child").appendTo("body");
+        })
+
+    </script>
+</html>

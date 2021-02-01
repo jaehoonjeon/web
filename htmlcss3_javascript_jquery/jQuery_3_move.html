@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <script src="jquery-3.5.1.js"></script>
+</head>
+
+<body>
+    <div id="container" style="background-color: lightgray;">
+        <div id="wrap" style="background-color: green;">
+            <h1>Hello</h1>
+        </div>
+    </div>
+    <script>
+        
+        $("<h1></h1>").html("appendTo").appendTo("#wrap"); //wrap랑 같은 레벨
+        $("<h1></h1>").html("prependTo").prependTo("#wrap"); //wrap 안에 레벨
+        $("<h1></h1>").html("insertAfter").insertAfter("#wrap"); //wrap 하위 레벨
+        $("<h1></h1>").html("insertBefore").insertBefore("#wrap"); //wrap랑 같은 레벨
+        
+        
+        //아래와 같이도 사용 가능
+        /*
+        $("#wrap").append("<h1>append</h1>");
+        $("#wrap").prepend("<h1>prepend</h1>");
+        $("#wrap").after("<h1>after</h1>");
+        $("#wrap").before("<h1>before</h1>");\
+        */
+    </script>
+</body>
+
+</html>

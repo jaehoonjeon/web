@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <style>
+            * { margin: 0; padding: 0}
+        </style>
+        <script></script>
+    </head>
+    
+    <body>
+        <!-- Div 박스 성질 1 크기를 지정해야한다-->
+        <div style="background-color: red; width: 100px; height: 100px"></div>
+        <br>
+        
+        <!-- Div 박스 성질 2 % -->
+        <div style="background-color: blue; width: 100%; height: 100px"></div>
+        <br>
+        
+        <!-- Div 박스 성질 3 한칸 박스 차지-->
+        <div style="background-color: green; width: 50%; height: 100px"></div> 
+        <div style="background-color: black; width: 50%; height: 100px"></div>
+        <br>
+        
+        <!-- Div 박스 성질 4: 나란히 가로로 정렬시키기 -->
+        <!-- 
+            display: inline은 너비 높이 의미없고, div안에 박스만 적용 (기본 block)
+                     inline-block 정의된 부분만 차지
+        -->
+        <div style="display: inline-block; background-color: pink; width: 40%; height: 100px"></div>
+        <div style="display: inline-block; background-color: black; width: 40%; height: 100px"></div>
+        <div style="display: inline-block; background-color: yellow`    1; width: 10%; height: 100px"></div>
+        <br><br>
+        
+        
+        <!-- Div 박스 성질 5: 50% 너비(가로크기)로 나란히 정렬시키기(1)  div로 묶어서 font-size:0 하기-->
+        <div style="font-size: 0">
+            <div style="display: inline-block; background-color: skyblue; width: 50%; height: 100px"></div>
+            <div style="display: inline-block; background-color: red; width: 50%; height: 100px"></div>
+        </div>
+        <br><br>
+        
+        <!-- Div 박스 성질 6: 50% 너비(가로크기)로 나란히 정렬시키기(2) 한줄로 쓰기 -->
+        <div style="display: inline-block; background-color: green; width: 30%; height: 100px"></div><div style="display: inline-block; background-color: yellow; width: 30%; height: 100px"></div><div style="display: inline-block; background-color: brown; width: 40%; height: 100px"></div>
+        <br><br>
+        
+        <!-- Div 박스 성질 7: 50% 너비(가로크기)로 나란히 정렬시키기(3) 여백 없애기 -->
+        <div style="display: inline-block; background-color: red; width: 50%; height: 100px; margin: 0 -6px 0 0"></div>
+        <div style="display: inline-block; background-color: blue; width: 50%; height: 100px"></div>
+        <br><br>
+        
+        <!-- Div 박스 성질 8: 50% 너비(가로크기)로 나란히 정렬시키기(4) -float 이용 -->
+        <div></div>
+        <br><br>
+        
+        <!-- Div 박스 성질 9: 세로 틈 생긴거 없애기 margin, div로 묶어서 line-height주기-->
+        <div style="line-height: 0px">
+            <div style="display: inline-block; background-color: green; width: 100%; height: 100px; margin: 0 -6px 0 0" ></div>
+            <div style="display: inline-block; background-color: skyblue; width: 100%; height: 100px"></div>
+        </div>
+        <br><br>
+        
+        
+    </body>
+</html>

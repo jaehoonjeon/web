@@ -1,0 +1,189 @@
+<!DOCTYPE-html>
+<html>
+    <head>
+        <script>
+            window.onload = function(){
+                //***************************************************************************
+                //모던 웹을 위한 JavaScript + jQuery 입문 3판
+                //***************************************************************************
+
+                //---------------------------------------------------------------------------
+                //문자열은 '', 링크내용은 ""
+
+                //---------------------------------------------------------------------------
+                //Boolean False 인것들
+                Boolean(0), Boolean(null), Boolean(undefined), Boolean(NaN), Boolean('');
+
+                //---------------------------------------------------------------------------
+                //비교 연산자
+                10 ==  '10';   // true
+                0  ==  false;  // true
+                10 === '10';   // false
+                0  === false;  // false
+
+                //---------------------------------------------------------------------------
+                //표현식(IE X)
+                var str = `표현식 273+27의 값은 ${273+27}입니다..!!`
+
+
+                //---------------------------------------------------------------------------
+                //for in, for of
+                var arr = [10, 20, 30];
+
+                for (i in arr) // i = index
+                {console.log("for in value:" + arr[i])}
+
+                for(i of arr)  // i = value (IE X)
+                {console.log("for of value:" + i)}
+
+
+                //---------------------------------------------------------------------------
+                //익명함수 (변수에 담아서 사용 가능)
+                var fun_add_one = function(a){return a+1};
+                fun_add_one(1)
+
+                //함수 arguments 사용(IE X)
+                function fun_vParam() {
+                    for(i=0; i < arguments.length; i++)
+                    {console.log('variable_arguments:' + arguments[i]);}
+                }
+
+                fun_vParam("h","i");
+
+                //---------------------------------------------------------------------------
+                //callback 함수(함수를 매개변수로 갖는 함수)
+                function callNTimes(n, callback)
+                {
+                    for(var i=0; i<n; i++) {callback()}
+                }
+
+                callNTimes(3, function(){
+                    console.log("callback n Times")
+                })
+
+                //---------------------------------------------------------------------------
+                //var의 전역변수로의 발생되는 문제 (var i = 3 으로 유지됨으로 전부 'clicked 3 button')
+                for(var i=0; i<3; i++)
+                {
+                    var button = document.createElement("button");
+                    button.textContent = i + " button";
+                    button.onclick = function(){
+                        console.log("clicked " + i + " button")
+                    }
+                    //document.body.appendChild(button);
+                }   
+                // -> Function으로 묶어서 i를 전역변수로 사용하지 않게 처리
+                for(var i=0; i<3; i++)
+                {
+                    (function(i){
+                        var button = document.createElement("button");
+                        button.textContent = i + " button";
+                        button.onclick = function(){
+                            console.log("clicked " + i + " button")
+                        }
+                        document.body.appendChild(button);
+                    })(i);
+                }
+                
+                //---------------------------------------------------------------------------
+                //함수의 기본값 넣기 4가지
+                function func_default_params(a, b, c)
+                {
+                    if(typeof(a) == "undefined" ) {a = 10;} 
+                    if(!b) {b=20;} // 이방법이 가장 직관적이고 안헤깔릴듯
+                    c = c || 30;   // (if(!c){c=30;} )
+                    console.log("call func with default params : " + a+b+c);
+                }
+                //IE X
+                function func_default_params(a=10, b=20, c=30)
+                {console.log("call func with default params : " + a+b+c);}
+                
+                //---------------------------------------------------------------------------
+                //lamda, 전개연산자 in lamda (IE X)
+                var sumAll = (...numbers) => {
+                    var output = 0;
+                    for(var i=0; i<numbers.length; i++) { output += numbers[i]; }
+                    return output;
+                }
+                
+                console.log("sumAll using lamda : " + sumAll(1,2,3,4))
+
+                //---------------------------------------------------------------------------
+                //object(객체)
+                var object = {
+                    'key1':'value1',
+                    'key2':'value2',
+                    'pr': function(){
+                        console.log("pr " + this.key1 + ","+ this.key2)
+                    }
+                };                
+                //object['key'] key값 꼭 '문자열'로 
+                console.log('object keys :: '+ object['key1'] + ' ' + object.key1)  
+                //객체내 key값 있는지 확인
+                console.log('key1 in object? ' + ('key1' in object)) 
+                //객체내 함수 
+                object.pr()
+                
+                //객체 생성자
+                function Student(name, korean, math, english){
+                    this.name = name;
+                    this.korean = korean;
+                    this.math = math;
+                    this.english = english;
+                }
+                
+                Student.prototype.getSum = function() {
+                    return this.korean + this.math + this.english;
+                }
+                
+                var st = new Student('hong', 10, 20, 30)
+                console.log(st.name + ":"+ st.getSum())
+                
+                //---------------------------------------------------------------------------
+                //캡슐화(캡슐안에 넣어서 직접적인 접근을 못하게 함 - 변수의 보호)
+                function Rectagle(width, height) {
+                    var _width = width;  // 내부변수로 선언해 .으로 접근 불가, _로 시작 직접적인 접근을 하지 말아라 라는 약속
+                    var _height = height;
+
+                    this.getWidth = function() { return _width; }
+                    this.getHeight = function() { return _height; }
+
+                    this.setWidth = function(value) {
+                        if(value <= 0) { return alert('error'); }
+                        return _width;
+                    }
+                    this.setHeight = function(value) {
+                        if(value <= 0) { return alert('error'); }
+                        return _height;
+                    }
+                }
+                
+                
+                var rec = new Rectagle(20, 30)
+                //직접 접근 불가 rec._width
+                console.log("width:" + rec.getWidth() + " height:" + rec.getHeight());
+                
+                //---------------------------------------------------------------------------
+                //객체는 앝은 복사(참조복사)
+                //깊은 복사 하는 법
+                function deepCopy(obj)
+                {
+                    var output = {};
+                    for(var i in obj){
+                        output[i] = obj[i];
+                    }
+                    return output;
+                }
+                
+                
+                
+                
+                //---------------------------------------------------------------------------
+            }
+        </script>
+    </head>
+    <body>
+        <H1>What is Lorem Ipsum?</H1>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+    </body>
+</html>

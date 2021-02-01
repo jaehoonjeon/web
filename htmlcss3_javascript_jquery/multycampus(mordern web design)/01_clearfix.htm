@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>Mordern WebSite & Layout Design</title>
+        <style>
+            /*
+            clearfix :: float 로 띄웠을때 레이아웃이 깨지는걸 방지하기 위해 사용
+            */
+            html, body { height: 100%; background: #000011; color: gray;}
+            * {margin: 0; padding: 0;}
+            
+            .box1{
+                background-color: #80FFFF; width: 600px; height: 150px;
+                text-align: center; line-height: 150px;
+                margin: 10px auto;
+            }
+            .box2{
+                background-color: #FFFF00; width: 150px; height: 150px;
+                text-align: center; line-height: 150px;
+                float: left;
+            }
+            .box3{
+                background-color: #FFFFFF; width: 150px; height: 150px;
+                text-align: center; line-height: 150px;
+                float: left;
+            }
+            .box4{
+                background-color: #80FFFF; width: 600px; height: 150px;
+                text-align: center; line-height: 150px;
+                margin: 10px auto;
+            }
+            .clearfix::after{
+                content: "[안내] 위 배너 이미지를 클릭하면 새창으로 연결되서 이동합니다"; display: block; clear: both;
+            }
+            .box23-wrap{
+                border: 0px solid red; width: 600px;
+                margin: 0 auto;
+            }
+        </style>
+        <script></script>
+    </head>
+    
+    <body>
+        
+        <div class="box1">Box 1</div>
+        <div class="clearfix box23-wrap">
+            <div class="box2">Box 2</div>
+            <div class="box3">Box 3</div>
+        </div>
+        <div class="box4">Box 4</div>
+    </body>
+</html>

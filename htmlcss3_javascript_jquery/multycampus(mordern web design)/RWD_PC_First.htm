@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>RWD_PC_First</title>
+        <style>
+            
+            /* * {margin:0; padding: 0;} */
+            
+            #rwd-wrap {
+                width: 960px;
+                border: 1px solid;
+                padding: 20px;
+                margin: 0px auto;
+                background-color: #ddd;
+            }
+            header {
+                border: 1px solid #000;   
+                background-color: white;
+                padding: 20px;
+                margin: 0 0 20px 0;
+            }
+            main {
+                border: 1px solid #000;   
+                background-color: skyblue;
+                padding: 20px;
+                margin: 0 0 20px 0;
+                
+                /* box-sizing 으로 padding을 안쪽으로 먹이면~ */
+                width: 720px;
+                box-sizing: border-box;
+                
+                float: left;
+            }
+            aside {
+                border: 1px solid #000;   
+                background-color: yellow;
+                padding: 20px; /* 240px */
+                margin: 0 0 20px 0;
+                
+                /* box-sizing 으로 padding을 안쪽으로 먹이면~ */
+                width: 220px;
+                box-sizing: border-box;
+                float: right;
+            }            
+            footer {
+                clear: both;
+                border: 1px solid #000;   
+                background-color: white;
+                padding: 20px;
+            }
+            
+            /* 미디어 쿼리 
+               가로 너비가 0 ~ 520px 사이인 경우
+            */
+            @media ( max-width: 520px ) {
+                #rwd-wrap {
+                    width: auto;
+                }
+                main {
+                    width: 100%;
+                    float: none;
+                }
+                aside {
+                    width: 100%;
+                    float: none;
+                }
+            }
+        </style>
+        <script>
+        </script>
+    </head>
+    <body>
+        <div id="rwd-wrap">
+            <header>
+                <h1>Header</h1>
+            </header>
+            
+            <main>
+                <h2>Main</h2>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+            </main>
+            
+            <aside>
+                <h2>Sidebar</h2>
+                <ul>
+                    <li>Red</li>
+                    <li>Green</li>
+                    <li>Blue</li>
+                    <li>Yellow</li>
+                </ul>
+            </aside>    
+            <footer>
+                <h1>Footer</h1>
+            </footer>
+        </div>
+    </body>
+</html>

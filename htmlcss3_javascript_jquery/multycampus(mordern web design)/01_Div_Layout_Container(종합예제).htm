@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>Mordern WebSite & Layout Design</title>
+        <style>
+            html, body { font-family: malgun gothic; }
+            * {margin: 0; padding: 0; }
+            
+            /* container */
+            .container {
+                width: 800px; border: 5px solid #000; box-sizing: border-box;
+                margin: 0 auto;
+            }
+            
+            /* uppermost menu */
+            .uppermost {
+                background-color: pink; height: 50px;
+                line-height: 50px; 
+            }
+            .container-upm {
+                background-color: yellow; 
+                border: 0px; width: 100%;
+                padding-left: 20px;
+            }
+            
+            /* header */
+            .header {
+                background-color: #90FFFF; height: 150px; width: 100%;
+                text-align: center; line-height: 150px;
+            }
+            
+            .container-h {
+                width: 800px; border: 0px; /*background-color: #FDA;*/
+                height: 150px;
+            }
+            
+            /* nav */
+            .nav {
+                background-color: #00FFFF; height: 50px; width: 100%;
+                line-height: 50px;
+            }
+            
+            .container-n {
+                height: 50px; border: 0px; /*background-color: #FFFF00;*/
+            }
+            
+            /* content */
+            .content-wrap{
+                /*
+                border: 10px solid #000;
+                width: 800px;
+                overflow: auto;
+                box-sizing: border-box;
+                margin: 0 auto;
+                */
+            }
+            
+            .container-sc {
+                overflow: auto;
+                opacity: 1;
+            }
+            
+            .sidebar {
+                background-color: red; width: 30%; height: 300px;
+                text-align: center; line-height: 300px;
+                float: left;
+            }
+            .content {
+                background-color: blue; width: 70%; height: 300px;
+                text-align: center; line-height: 300px;
+                float: right;
+            }
+            
+            /* footer */
+            .footer {
+                background-color: gray; height: 150px; width: 100%;
+                text-align: center; line-height: 150px;
+                margin: 0 auto;
+            }
+            
+            .container-f {
+                height: 150px; border: 0px; background-color: /*lightgray;*/
+            }
+            
+            /* clear-fix */
+            .clear{
+                clear: both;
+            }
+        </style>
+        <script></script>
+    </head>
+    
+    <body>        
+        <div class="uppermost">
+            <div class="container container-upm">Log-in &nbsp; | &nbsp; Event Sale ~!!</div>
+        </div><!-- uppermost menu -->
+        
+        <div class="header">
+            <div class="container container-h">header</div>
+        </div><!-- //header -->
+        
+        <div class="nav">
+            <div class="container container-n">
+                menu1 &nbsp;&nbsp; menu2 &nbsp;&nbsp; menu3 &nbsp;&nbsp; menu4 &nbsp;&nbsp; menu5
+            </div>
+        </div><!-- //nav -->
+                
+        <div class="content-wrap">
+            <div class="container container-sc">
+                <div class="sidebar">sidebar</div>
+                <div class="content">content</div>
+            </div>
+        </div><!-- //content -->
+        
+        <div class="clear"></div>
+        <div class="footer">
+            <div class="container container-f">footer</div>
+        </div><!-- //footer -->
+        
+        
+    </body>
+</html>

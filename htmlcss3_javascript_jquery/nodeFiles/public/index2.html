@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>express</title>
+</head>
+
+<body>
+    <h1>CRUD json data using [ajax, node js]</h1>
+    <button id="get-all">get all data</button>
+    <button id="post-all">add data</button>
+    <button id="get-one">get one data</button>
+    <button id="put-one">update one data</button>
+    <button id="delete-one">delete one data</button>
+    <script>
+        $("#get-all").click(function () {
+            $.ajax({
+                method: "GET",
+                url: "/drink",
+                data: {
+                    a: "hello_1",
+                    b: "hello_2"
+                },
+                success: function (data) {
+                    console.log(data)
+                }
+            });
+        })
+        
+        $("#post-all").click(function () {
+            $.ajax({
+                method: "POST",
+                url: "/drink",
+                data: {
+                    name: $("#name").val(),
+                    price: $("#price").val()
+                },
+                success: function (data) {
+                    console.log(data)
+                }
+            });
+        })
+
+        $("#get-one").click(function () {
+            $.ajax({
+                method: "GET",
+                url: "/drink/0",
+                success: function (data) {
+                    console.log(data)
+                }
+            });
+        })
+
+        $("#put-one").click(function () {
+            $.ajax({
+                method: "PUT",
+                url: "/drink/0",
+                success: function (data) {
+                    console.log(data)
+                }
+            });
+        })
+
+        $("#delete-one").click(function () {
+            $.ajax({
+                method: "DELETE",
+                url: "/drink/0",
+                success: function (data) {
+                    console.log(data)
+                }
+            });
+        })
+        
+    </script>
+    <hr>
+    <span>이름:</span>
+    <input type="text" id="name">
+    <br>
+    <span>가격:</span>
+    <input type="text" id="price">
+</body>
+
+</html>

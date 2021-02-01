@@ -1,0 +1,131 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Morden WebSite Layout Design</title>
+        <style>
+            html, body { font-family: "malgun gothic", "dotum"; text-transform: capitalize; }
+            * {margin:0; padding: 0; }
+            
+            /* container */
+            .container{
+                width: 800px; border: 5px solid; box-sizing: border-box;
+                margin: 0 auto; opacity: 0.5;
+            }
+            /* uppermost menu */
+            .uppermost {
+                
+            }
+            .container-upm {
+                
+            }
+            
+            /* header */
+            header {
+                background-color: #90FFFF; height: 150px;
+                text-align: center; line-height: 150px;
+            }
+            .container-h {
+                background-color: #FDA; border: 0px;
+            }
+            
+            /* nav */
+            nav {
+                background-color: #10FFFF; height: 50px;
+                text-align: center; line-height: 50px;
+            }
+            .container-n {
+                background-color: #FDA; border: 0px;
+            }
+            
+            /* content */
+            .content-wrap {
+                background-color: pink;
+            }
+            .container-sc {
+                opacity: 1;
+                overflow: auto;
+            }
+            aside {
+                background-color: red; width: 30%; height: 300px;
+                /*text-align: center;*/ /* line-height: 300px; */
+                float: left;
+                font-size: 0.75em;
+                padding: 20px 0 0 30px;
+                box-sizing: border-box;
+                line-height: 1.8em;
+            }
+            article{
+                background-color: blue; width: 70%; height: 300px; 
+                text-align: center; /* line-height: 300px; */
+                float: left;
+            }
+            
+            /* footer */
+            footer {
+                background-color: gray; height: 150px;
+                text-align: center; line-height: 150px;
+            }
+            .container-f {
+                background-color: #444; border: 0px;
+            }
+            
+            
+            /* clearfix */
+            .clear{
+                clear: both;
+            }
+        </style>
+    </head>
+    
+    <body>
+        
+        <!--uppermost menu-->
+        <div class="uppermost">
+            <div class="container container-upm">uppermost menu</div>
+        </div>
+        
+        
+        <!--header-->
+        <header>
+            <div class="container container-h">header</div>
+        </header>
+        
+        <!--nav-->
+        <nav>
+            <div class="container container-n">nav</div>
+        </nav>
+        
+        <!--content-->
+        <div class="content-wrap">
+            <div class="container container-sc">
+                <aside>
+                    <ol>                    
+                        <li>기존 sidebar 영역에 해당</li>
+                        <li>왼쪽 또는 오른쪽에 보통 배치</li>
+                        <li>광고, 배너 등을 삽입할 때 사용</li>
+                        <li>본문 기사와 무관한 내용</li>
+                    </ol>
+                </aside>
+                <article>
+                    <section>
+                        <h2>Section Title</h2>
+                        here is the area for a section <br>
+                        here is the area for a section <br>
+                        here is the area for a section <br>
+                    </section>
+                </article>
+            </div>
+        </div>
+        
+        <div class="clear"></div>
+        
+        <!--footer-->
+        <footer>
+            <div class="container container-f">footer</div>
+        </footer>
+    </body>
+    
+    
+</html>

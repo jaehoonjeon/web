@@ -1,0 +1,71 @@
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>express</title>
+</head>
+<body>
+    <h1>node js</h1>
+    <h2>get [xml, json] data using [ajax, node js]</h2>
+    <button id="hello">get data using XML</button>
+    <button id="hellojson">get data using json</button>
+    <script>
+        $.ajax({
+            url: "/data.html",
+            success: function(data, textStatus, xhr)
+            {
+                console.log(data)
+                console.log(textStatus)
+            }
+        })
+        
+        /////////////////////////////////////////////
+        // XML
+        /////////////////////////////////////////////
+        $("#hello").click( function() {
+            $.ajax({
+                    url: "/data.xml",
+                    success: function(data, textStatus, xhr)
+                    {
+                        //data에서 태그를 find 해서 처리
+                        $(data).find("product").each(function(data, textStatus, xhr) {
+                            var name = $(this).find("name").text()
+                            var price = $(this).find("price").text()
+
+                            var $header = $("<h1></h1>").text(name +  " - " +  price + "원");
+                            $("<div></div>").append($header).appendTo("body")
+                        })
+                    }
+            })
+        }) 
+        /////////////////////////////////////////////
+        // JSON
+        /////////////////////////////////////////////
+        $("#hellojson").click(function(){
+            $.ajax({
+                url: "/data.json",
+                success: function(data, textStatus, xhr)
+                {
+                    
+                    // data.forEach(function (item){
+                    //     //data 를 그냥 forEach로 접근
+                    //     var $header = $("<h1></h1>").text(item.name +  " - " + item.price + "원");
+                    //         $("<div></div>").append($header).appendTo("body")
+                    // })
+
+                    //forEach IE에서 동작안해서 for문으로 대체
+                    for(var i=0; i<data.length; i++)
+                    {
+                        var $header = $("<h1></h1>").text(data[i].name +  " - " + data[i].price + "원");
+                            $("<div></div>").append($header).appendTo("body")
+                    }
+
+                }
+            });
+        })
+    </script>
+</body>
+</html>

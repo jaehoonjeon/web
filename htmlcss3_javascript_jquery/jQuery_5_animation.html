@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <style>
+        .box, .box2 {
+            width: 100px; height: 100px;
+            background-color: orange;
+            position: relative;
+        }
+        .showhide {
+            visibility: visible;
+        }
+        .hide {
+            visibility: hidden;
+        }
+        .page{background-color: white;}
+    </style>
+    <script src="jquery-3.5.1.js"></script>
+    <script>
+    </script>
+</head>
+
+<body>
+    <button id="b1">Toggle Show</button>
+    <div class="page">
+        <h1>Lorem ipsum dolor sit amet</h1>
+        <p>Consequat consectetur ea veniam voluptate sunt tempor non aute cillum laborum laboris voluptate reprehenderit eu. Commodo exercitation nostrud eu adipisicing ipsum irure nostrud tempor amet. Enim enim ad sint aliqua aute nulla veniam enim laborum exercitation. Laboris dolor veniam sint eiusmod ea Lorem minim et ullamco qui. Voluptate incididunt deserunt et veniam. Lorem nisi ea nostrud nostrud sunt esse. In sunt officia sint ea excepteur aliqua amet.</p>
+    </div>
+    <br>
+    <div class ="box"></div>
+    <br>
+    <div class ="box2"></div>
+    <br>
+    <h1 class="showhide">show hide toggle</h1>
+    <button id="b2">click!</button>
+</body>
+    <script>
+       $("#b1").click(function(){
+            //$("div.page").toggle('slow');
+            //$("div.page").slideToggle('slow');
+            $("div.page").fadeToggle('slow');
+       })
+
+       ///////////////////////////////////////////////////////////////////////
+
+       $(".box").click(function(){
+            //$(this).clearQueue();  //대기열에 있던 에니메이트는 clear됨 (여러번 클릭을 방지)
+            //$(this).stop(true, true);  // clearQueue(큐Clear), goToEnd(에니메이트 중지 => 애니메이트끝으로감)
+            $(this).stop(true, false); // clearQueue(큐Clear), goToEnd(에니메이트)
+
+            $(this).animate({
+                //width: 300,
+                //height: 300
+                width: "+=100",
+                height: "+=100"
+            }, 1.5 * 1000)
+
+
+        });
+
+      //animate => delay => animate
+       $(".box2").click(function(){
+            $(this)
+                .animate({
+                    left: "+=100"
+                }, 1000)
+                .delay(0.5 * 1000)
+                .animate({
+                    left: "+=100"
+                }, 1000)
+       });
+       ///////////////////////////////////////////////////////////////////////
+
+       //toggle class
+       $("#b2").click(function(){
+           $(".showhide").toggleClass("hide");
+       })
+    </script>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<!--jQuery class, 삭제-->
+
+<head>
+    <meta charset="utf-8">
+    <style>
+        .moveToCenter {text-align: center;}
+        .red-text {color: red;}
+    </style>
+    <script src="jquery-3.5.1.js"></script>
+</head>
+
+<body>
+    <h1>Hello!</h1>
+    <script>
+        
+        //class 추가
+        setTimeout(function () {
+            
+            $("h1").addClass("red-text");
+            $("h1").addClass("moveToCenter");
+            $("h1").text("addedClass");
+
+            //class 적용되어있는지 확인
+            console.log($("h1").hasClass("moveToCenter"));
+            console.log($("h1").hasClass("moveToCenter2"));
+        }, 1000 * 1.5);
+        
+        //class 삭제
+        setTimeout(function () {
+            
+            $("h1").removeClass("moveToCenter")
+            $("h1").removeClass("red-text")
+            $("h1").text("removedClass")
+        }, 1000 * 3);
+
+        //적용된 class 전부 삭제
+        //$("h1").removeAttr("class");
+
+        //태그 삭제
+        //$("h1").remove();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>CSS WebSite Layout & Publishing</title>
+        <style>
+            * { margin: 0; padding: 0; }
+            
+            
+            /* static, fixed, relative, absolute */
+            
+            #aaa {
+                background-color: blue; width: 600px; height: 200px;
+                position: absolute; 
+                z-index: 1;
+                
+            }
+            
+            #bbb {
+                background-color: yellow; width: 700px; height: 300px;
+                position: relative;  left: 150px; top: 50px;
+                z-index: 2;
+            }
+            
+            #ccc {
+                background-color: red; width: 600px; height: 400px;
+                /* 인접한 relative 의 기준으로 찾아간다 relative 위치 이동하기 전  */
+                position: absolute; left: 100px; top: 100px;
+                z-index: 3;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="aaa"></div>
+        <div id="bbb"></div>
+        <div id="ccc"></div>
+    </body>
+</html>

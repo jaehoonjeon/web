@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- jQuery PlugIn 을 이용할 수도 있다-->
+    <meta charset="utf-8">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            list-style: none;
+        }
+    </style>
+    <script src="jquery-3.5.1.js"></script>
+    <script>
+        $(document).ready(function () {
+            var length = $(".container li").length;
+            var width = 980;
+            var height = 380;
+
+
+            $(".container").css({
+                width: width,
+                height: height,
+                overflow: "hidden"
+            })
+            $(".container ul").css({
+                width: width * length
+            })
+            $(".container li").css({
+                width: width,
+                height: height,
+                float: "left"
+            })
+
+
+            var moveTo = function (index) {
+                //매개변수를 보완합니다.
+                if (!index) {
+                    index = 0
+                }
+                index = index % length
+                //애니메이션으로 이동합니다.
+                // $(".container ul").animate({
+                //     marginLeft: -width * index
+                // }, 1 * 1000);
+
+                $(".container ul").css({
+                    marginLeft: -width * index
+                })
+
+                var title = $($(".container li")[index]).attr("data-title")
+                $("h1").html(title)
+                $("h2").html("0" + (index + 1))
+                currentIndex = index;
+            }
+
+
+            //버튼에 값주고 이벤트 주기
+            for (var i = 0; i < length; i++) {
+                //i값이 9로 유지되기때문에 자기반환함수로 감싼다
+                (function (i) {
+                    $("<button></button").text(i).click(function () {
+                        moveTo(i)
+                    }).appendTo("body")
+                })(i)
+            }
+
+            //자동 이미지 변경
+            var currentIndex = 0
+            setInterval(function () {
+                currentIndex += 1;
+                moveTo(currentIndex)
+            }, 1000 * 3)
+
+            moveTo(0)
+            window.moveSlider = moveTo
+
+        });
+    </script>
+</head>
+
+<body>
+    <h2 id="index-label"></h2>
+    <h1 id="title-label"></h1>
+
+    <div class="container">
+        <ul>
+            <li data-title="가나다"><a href="#"><img src="./images/a.jpg" /></a></li>
+            <li data-title="라마바"><a href="#"><img src="./images/b.jpg" /></a></li>
+            <li data-title="사아자"><a href="#"><img src="./images/c.jpg" /></a></li>
+            <li data-title="차카타"><a href="#"><img src="./images/d.jpg" /></a></li>
+            <li data-title="파하가"><a href="#"><img src="./images/e.jpg" /></a></li>
+            <li data-title="나다라"><a href="#"><img src="./images/f.jpg" /></a></li>
+            <li data-title="마바사"><a href="#"><img src="./images/g.jpg" /></a></li>
+            <li data-title="아자차"><a href="#"><img src="./images/h.jpg" /></a></li>
+            <li data-title="카타파"><a href="#"><img src="./images/i.jpg" /></a></li>
+        </ul>
+    </div>
+
+</body>
+</html>

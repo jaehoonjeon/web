@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>Mordern WebSite & Layout Design</title>
+        <style>
+            html, body {height: 100%; background-color: #220022; color: #c0c0c0;}
+            * { margin: 0; padding: 0 } 
+            
+            /*
+            float로 띄운 다음에 위치시키기
+            
+            clearfix를 이용해 차단막 만들기
+            */
+            
+            .box1{
+                background-color: white;
+                width: 50%;
+                height: 500px;
+                float: left;
+            }
+            .box2{
+                background-color: yellow;
+                width: 50%;
+                height: 500px;
+                float: left;
+            }
+            .box3{
+                background-color: skyblue;
+                width: 100%;
+                height: 150px;
+            }
+            .clearfix::after{
+                content: "ABCDEF";
+                display: block;
+                clear: both;
+            }
+        
+        </style>
+        <script></script>
+    </head>
+    
+    <body>
+        <div class="clearfix">
+            <div class="box1">Box 1</div>
+            <div class="box2">Box 2</div>
+        </div>
+        <div class="box3">Box 3</div>
+    </body>
+</html>
+
+<!--
+    1) 1번 예제의 문제점은 새로 만든 하단의 박스가 위 박스 밑으로 들언간다는 점.
+       - 이것을 막기위해서 "클리어픽스" 기술을 사용.
+       - float 해제 : float이 적용된 박스의 밑으로 이동하는 것을 방지.
+-->

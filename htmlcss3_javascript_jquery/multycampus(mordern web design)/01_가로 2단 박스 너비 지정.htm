@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Modern WebSite Layout & Design</title>
+        <style>
+            * {margin: 0; padding: 0}
+            
+            html, body { height: 100%; }
+            /*
+                float 로 띄워서 가로 n단 박스 만들기
+            */
+            
+            .box1 {
+                background-color: red;
+                width: 35%; 
+                height: 100px;
+                float: right;
+            }
+            .box2 {
+                background-color: green;    
+                width: 35%; 
+                height: 100px;
+                float: right;
+            }
+            .box3 {
+                background-color: yellow;    
+                width: 30%;
+                float: left;
+                border: solid 10px;
+                box-sizing: border-box; //border-box 내용을 차지 contnt-box 내용유지
+            }
+            
+            /*
+            .height100{ height: 100%; }
+            .height70{ height: 70%; }
+            .height30{ height: 30%; }
+            .table100 {display: table; height: 100%; }
+            .table70 {display: table; height: 70%; }
+            .table30 {display: table; height: 30%; }
+            */
+            
+        </style>
+        <script></script>
+    </head>
+    <body>
+        <div class="box1">Box 1</div>
+        <div class="box2">Box 2</div>
+        <div class="box3" style="height: 100%">Box 3</div>    
+    </body>
+</html>

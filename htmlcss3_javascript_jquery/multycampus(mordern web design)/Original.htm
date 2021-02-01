@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+    <heade>
+        <meta charset="utf-8">
+        <title>Modern WebSite Layout & Publishing</title>
+        <style>
+            html, body { font-family: "malgun gothic", dotum; text-transform: capitalize; }
+            * { margin:0; padding: 0; }
+            
+            /* container */
+            .container {
+                width: 800px; border: 5px solid black; box-sizing: border-box;
+                margin: 0 auto;
+            }
+            
+            /* uppermost */
+            .uppermost {
+                background-color: #4F02A9; height: 50px;
+                text-align: center; line-height: 50px;
+            }
+            .container-um {
+                background-color: #6818C6; border: 0px;
+            }
+            
+            /* header */
+            header {
+                background-color: #8244CA; height: 150px;
+                text-align: center; line-height: 150px;
+            }
+            .container-h {
+                background-color: #9055D5; border: 0px;
+            }
+            
+            /* nav */
+            nav {
+                background-color: #B486E9; height: 50px;
+                text-align: center; line-height: 50px;
+            }
+            .container-n {
+                background-color: #CEB4EC; border: 0px;
+            }
+            
+            /* main */
+            main {
+              
+            }
+            .container-sc {
+                overflow: auto;
+            }
+            aside#sidemenu {
+                background-color: #739B98;  width: 20%; height: 300px;
+                text-align: center; line-height: 300px;
+                float: right;
+            }
+            article {
+                background-color: #3F5858; width: 60%; height: 300px;
+                text-align: center; line-height: 300px;
+                float: left;
+            }
+            aside#sidebanner {
+                background-color: #546992; width: 20%; height: 300px;
+                text-align: center; line-height: 300px;
+                float: right;
+            }
+            
+            /* footermenu */
+            .footermenu {
+                background-color: #9C8CB0;  height: 50px;
+                text-align: center; line-height: 50px;
+            }
+            .container-fm {
+                background-color: #7F6C97; border: 0px;
+            }
+            
+            /* footer */
+            footer {
+                background-color: #CDC5D5; height: 150px;
+                text-align: center; line-height: 150px;
+            }
+            .container-f {
+                background-color: #C2B0D4; border: 0px;
+            }
+            
+            /* clearfix */
+            .clear { clear:both }
+            
+        </style>
+        <script></script>
+    </heade>
+    <body>
+        
+        <!-- uppermost -->
+        <div class="uppermost">
+            <div class="container container-um">uppermost menu</div>
+        </div>
+        
+        <!-- header -->
+        <header>
+            <div class="container container-h">header</div>
+        </header>
+        
+        <!-- nav -->
+        <nav>
+            <div class="container container-n">nav</div>
+        </nav>
+        
+        <!-- main -->
+        <main>
+            <div class="container container-sc">
+                <aside id="sidemenu">sidemenu</aside>
+                <article>content</article>
+                <aside id="sidebanner">sidebanner</aside>
+            </div>
+        </main>
+        <div class="clear"></div>
+        
+        <!-- footermenu -->
+        <div class="footermenu">
+            <div class="container container-fm">footermenu</div>
+        </div>
+        
+        <!-- footer -->
+        <footer>
+            <div class="container container-f">footer</div>
+        </footer>
+        
+    </body>
+</html>

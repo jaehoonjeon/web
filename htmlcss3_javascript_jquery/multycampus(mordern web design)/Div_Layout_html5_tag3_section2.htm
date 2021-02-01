@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Morden WebSite Layout Design</title>
+        <style>
+            html, body { font-family: "malgun gothic", "dotum"; text-transform: capitalize; }
+            * {margin:0; padding: 0; }
+            
+            /* container */
+            .container {
+                width: 800px; border: 5px solid; box-sizing: border-box;
+                margin: 0 auto; opacity: 0.5;
+            }
+            
+            /* uppermost menu */
+            .uppermost {
+                background-color: red; height: 50px;
+                text-align: center; line-height: 50px;
+            }
+            .container-upm {
+                background-color: brown; border: 0px; width: 100%;
+            }
+            
+            /* header */
+            header {
+                background-color: #90FFFF; height: 150px;
+                text-align: center; line-height: 150px;
+            }
+            .container-h {
+                background-color: #FDA; border: 0px;
+            }
+            
+            /* nav */
+            nav {
+                background-color: #10FFFF; height: 50px;
+                text-align: center; line-height: 50px;
+            }
+            .container-n {
+                background-color: #FDA; border: 0px;
+            }
+            
+            /* content */
+            .content-wrap {
+                background-color: pink;   
+            }
+            .container-sc {
+                opacity: 1;
+                overflow: auto;
+                border: 0px;
+            }
+            
+            aside {
+                background-color: orange; width: 150px; height: 300px;
+                /* text-align: center; line-height: 300px; */
+                float: left;
+            }
+            article {
+                background-color: skyblue; width: 500px; height: 300px;
+                text-align: center; /* line-height: 20px; */
+                float: left;
+            }
+            aside#left-banner {
+                /* text-align: center; line-height: 300px; */
+                font-size: 0.75em;
+                padding: 30px 0 0 40px;
+                box-sizing: border-box;
+                float: left;
+            }
+            aside#right-banner {
+                background-color: yellow; width: 150px; height: 300px;
+                text-align: center; line-height: 300px;
+                float: right;
+            }
+            section {
+                border: 1px solid;
+                width: 400px; padding: 15px;
+                background-color: rgba(255, 255, 255, 0.5);
+                border-radius: 20px;
+                margin: 20px auto;
+                text-transform: lowercase;
+            }
+            section h2 {
+                font-size: 18px; padding: 0 0 20px 0;
+                text-transform: uppercase;
+            }
+            
+            /* footer menu */
+            .footermenu {
+                background-color: #333; height: 50px;
+                text-align: center; line-height: 50px;
+            }
+            .container-fm {
+                background-color: #666; border: 0px;
+            }
+            
+            /* footer */
+            
+            footer {
+                background-color: #666; height: 150px;
+                text-align: center; line-height: 150px;
+            }
+            
+            .container-f {
+                background-color: #FDA; border: 0px;
+                opacity: 0.1;
+            }
+            
+            /* clearfix */
+            .clear {clear: both;}
+            
+        </style>
+    </head>
+    <body>
+        <!-- uppermost -->
+        <div class="uppermost">
+            <div class="container container-upm">uppermost menu</div>
+        </div>
+        
+        <!-- header -->
+        <header>
+            <div class="container container-h">header</div>
+        </header>
+     
+        <!-- nav -->
+        <nav>
+            <div class="container container-n">nav</div>
+        </nav>
+        
+        <!-- content -->
+        <div class="content-wrap">
+            <div class="container container-sc">
+                <aside id="left-banner">                
+                    <ul>
+                        <li>menu 1</li>
+                        <li>menu 2</li>
+                        <li>menu 3</li>
+                        <li>menu 4</li>
+                        <li>menu 5</li>
+                    </ul>
+                </aside>
+                <article>
+                    <section>
+                        <h2>Section Title</h2>
+                        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
+                    </section>
+                </article>
+                <aside id="right-banner">right banner</aside>
+            </div>
+        </div>
+        
+        <div class="clear"></div>
+        
+        <!-- footermenu -->
+        <div class="footermenu">
+            <div class="container container-fm">footer menu</div>
+        </div>
+        
+        <!-- footer -->
+        <footer>
+            <div class="container container-f">footer</div>
+        </footer>
+    </body>
+    
+    
+</html>

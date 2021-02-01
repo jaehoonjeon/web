@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+    <heade>
+        <meta charset="utf-8">
+        <title>Modern WebSite Layout & Publishing</title>
+        <style>
+            html, body { font-family: "malgun gothic", dotum; text-transform: capitalize; }
+            * { margin:0; padding: 0; }
+            
+            /* container */
+            .container {
+                width: 1200px; border: 5px solid black; box-sizing: border-box;
+                margin: 0 auto;
+            }
+            
+            /* uppermost */
+            .uppermost {
+                background-color: #452C54; height: 50px;
+                text-align: center; line-height: 50px;
+            }
+            .container-um {
+                background-color: #000; border: 0px; width: 100%; color: #7f7f7f;
+            }
+            
+            /* header */
+            header {
+                background-color: #fff; height: 100px;
+                text-align: center; line-height: 100px;
+            }
+            .container-h {
+                background-color: #fff; border: 0px;
+            }
+            
+            /* nav */
+            nav {
+                background-color: #fff; height: 500px;
+                text-align: center; line-height: 500px;
+            }
+            .container-n {
+                background-color: #929292; border: 0px;
+            }
+            
+            /* main */
+            main {
+              background-color: #CAD9D9;
+            }
+            
+            .main-inner-box {
+                background-color: #DDD; width: 1200px; height: 400px; border: 0px;
+                position: relative;
+            }
+            .container-sc {
+                overflow: auto; width: 800px; height:300px; border:0px solid;
+                position: absolute; left: 225px; top: -120px; 
+            }
+            aside#sidemenu {
+                background-color: #739B98;  width: 250px; height: 300px;
+                text-align: center; line-height: 300px;
+                margin-right: 25px;
+                float: left;
+            }
+            article {
+                background-color: #3F5858; width: 250px; height: 300px;
+                text-align: center; line-height: 300px;
+                margin-right: 25px;
+                float: left;
+                
+            }
+            aside#sidebanner {
+                background-color: #546992; width: 250px; height: 300px;
+                text-align: center; line-height: 300px;
+                float: left;
+            }
+            
+            /* footermenu */
+            .footermenu {
+                background-color: #9C8CB0;  height: 50px;
+                text-align: center; line-height: 50px;
+            }
+            .container-fm {
+                background-color: #7F6C97; border: 0px;
+            }
+            
+            /* footer */
+            footer {
+                background-color: #CDC5D5; height: 150px;
+                text-align: center; line-height: 150px;
+            }
+            .container-f {
+                background-color: #C2B0D4; border: 0px;
+            }
+            
+            /* clearfix */
+            .clear { clear:both }
+            
+        </style>
+        <script></script>
+    </heade>
+    <body>
+        
+        <!-- uppermost -->
+        <div class="uppermost">
+            <div class="container container-um">uppermost menu</div>
+        </div>
+        
+        <!-- header -->
+        <header>
+            <div class="container container-h">header</div>
+        </header>
+        
+        <!-- nav -->
+        <nav>
+            <div class="container container-n">nav</div>
+        </nav>
+        
+        <!-- main -->
+        <main>
+            <div class="container main-inner-box">
+                <div class="container container-sc">
+                    <aside id="sidemenu">sidemenu</aside>
+                    <article>content</article>
+                    <aside id="sidebanner">sidebanner</aside>
+                </div>
+            </div>
+        </main>
+        <div class="clear"></div>
+        
+        <!-- footermenu -->
+        <div class="footermenu">
+            <div class="container container-fm">footermenu</div>
+        </div>
+        
+        <!-- footer -->
+        <footer>
+            <div class="container container-f">footer</div>
+        </footer>
+        
+    </body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Flexbox</title>
+        <style>
+            /*
+                1. 기본적으로 부모 > 자식들의 관계를 통해서
+                   속성의 특징들이 많이 결정된다
+                2. 부모(container), 자식(items)
+                3. 최신 브라우저 위주로 지원.
+                    - IE 10 이상(업데이트 유무에 따라 다름)
+            
+                4. 정렬과 관련된 기능들이 굉장히 좋다.
+            */
+            
+            * {margin:0; padding: 0;}
+            
+            .container {
+                display: flex;
+                background-color: gray;
+                height: 400px;
+                
+                /* vertical alignment (수직정렬) */
+                /*
+                    [1] : 위쪽으로 붙이기
+                */
+                align-items: flex-start;
+                
+                /*
+                    [2] : 아래쪽으로 붙이기
+                */
+                align-items: flex-end;
+                
+                /*
+                    [3] : 가운데로 붙이기
+                */
+                align-items: center;
+                
+                /*
+                    [4] : stretch : - default 값이다
+                                    - 부모(container) 키(높이) 따라가는것
+                                    - 부모가 키(높이)가 없으면 자식중 제일 큰 키를 따라가는 것
+                                    - 자식키가 암만 커도 부모키가 있으면 나머지 자식들은(키가 없는) 부모 키 따라감.
+                */
+                align-items: stretch;
+            }
+            
+            .item {
+                border: 1px solid black;
+                background-color: yellow;
+                width: 100px; /* height: 100px; */
+                margin: 10px;
+            }
+            
+        </style>
+        <script>
+        </script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="item" ></div>
+            <div class="item"></div>
+            <div class="item" style="height: 500px;"></div>
+        </div>
+    </body>
+</html>

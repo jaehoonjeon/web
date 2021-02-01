@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <style>
+            /*
+                position - 배치
+                    여러 요소(이미지, 박스)들을 자유자재로 내가 원하는 위치에 배치
+                    static   : 나열한 순서대로 그냥 배치, 위치 속성(top, left X
+                    relative : 이전 요소를 기준으로 배치, 위치 속상(top, left) O
+                    absolute : 원하는 위치에 배치 (가장 가까운 부모 요소를 기준으로) O
+                    fixed    : 지정한 위치에 고정 배치, 화면상에서 요소가 짤릴 수 있다
+            */
+            
+            * {margin: 0; padding: 0; }
+    
+            #wrapper {
+                border: 1px solid; width: 100px; height: 300px;
+                overflow: visible;
+                position: fixed; top: 100px; right: 100px; 
+            }
+            
+            .yellow-box {
+                background-color: yellow;
+                width: 100px; height: 100px;
+                position: absolute; top:0px; left: 0px;
+            }
+            .red-box {
+                /* yellow-box가 absolute로 집나가버려서 
+                yellow-box 가 기준이 아닌 wrapper(인접한요소)가 기준점이 되었다
+                */
+                background-color: red;
+                width: 100px; height: 100px;
+                position: relative; top:100px; left: 0px;
+                
+            }
+            .blue-box {
+                background-color: blue;
+                width: 100px; height: 100px;
+                position: relative; top:100px; left: 0px;
+                
+            }
+            .yellow-box, .red-box, .blue-box {
+                /*margin-top: 50px;*/
+            }
+            
+            #test {
+                border: 1px solid; width: 800px; height: 1400px;
+                margin: 0 auto;
+                background-color: #000; color: white; text-align: center;
+                padding-top: 30px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="wrapper">
+            <div class="yellow-box">yellow-box</div>
+            <div class="red-box">red-box</div>
+            <div class="blue-box">blue-box</div>
+        </div>
+        
+        <div id="test">Welcome to Korea</div>
+        
+    </body>
+</html>

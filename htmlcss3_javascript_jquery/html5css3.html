@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+    ***************************************************************************************************
+
+    개발 폰트 D2Coding
+
+    ***************************************************************************************************
+
+    다양한 형태의 Text-Shadow, Box-Shadow 미리 볼 수 있는 사이트
+    https://html-css-js.com/css/generator/text-Shadow/
+
+    Gradiant 미리 볼 수 있는 사이트
+    https://colorzilla.com
+
+    ***************************************************************************************************
+
+    css 초기화 (브라우져 마다 다른 margin, padding 등 을 대응)
+    ress.css (https://github.com/filipelinhares/ress)
+    normalize.css
+
+    ***************************************************************************************************
+
+    웹 폰트 
+    fonts.google.com
+
+    ***************************************************************************************************
+
+    스프라이트 이미지 - 아이콘을 하나의 이미지로 만들어서 짤라 쓰는 기술
+    www.toptal.com/developers/css/sprite-generator/
+
+    ***************************************************************************************************
+
+    뷰포트 meta태그 (모바일 페이지, 확대 축소 등)
+    m.naver.com 등 모바일 페이지에서 태그 가져다 쓰면 됨
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+
+    ***************************************************************************************************
+
+    css3 - display:gird Explorer 에선 동작 안함..
+
+    ***************************************************************************************************
+-->    
+<head>
+  <title>Document</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+  <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+</head>
+<script>
+  function aa(){
+    for (let index = 0; index < array.length; index++) {
+      const element = array[index];
+
+    }
+  }
+</script>
+<style>
+    body {
+      min-width: 600px;
+    }
+    .header{
+      height: 60px;
+      background-color: darkgrey;
+      line-height: 60px;
+      padding-left: 20px;
+      position: fixed;
+      left:0; right: 0;
+    }
+    .container {
+      overflow: hidden;
+      padding-top: 60px;
+    }
+    .aside {
+      float: left;
+      width: 200px;;
+    }
+    .section{
+      float: left;
+      width: 100%;
+      /* 오른쪽으로 aside 의 width만큼 -로 민다*/
+      margin-right: -200px;
+    }
+    .inner-section {
+      /* 오른쪽으로 aside 의 width만큼 +로 민다*/
+      padding-right: 200px;
+    }
+</style>
+<body>
+  <div class="header">
+    <h1>Fluid</h1>
+  </div>
+  <div class="container">
+    <div class="aside">
+      <h1>aside</h1>
+      <p>Lorem pariatur ullamco amet dolore deserunt anim proident quis nulla. Dolor occaecat anim elit aute ullamco voluptate eu eu nisi. Sunt aliqua deserunt excepteur commodo qui elit esse ex qui quis velit ut proident. Mollit tempor culpa quis ad excepteur nostrud. Deserunt ea ipsum mollit veniam ullamco incididunt ut aliqua magna excepteur. Nisi officia adipisicing in reprehenderit id ipsum laboris non occaecat deserunt fugiat.</p>
+    </div>
+    <div class="section">
+        <div class="inner-section">
+          <h1>section</h1>
+          <p>Lorem pariatur ullamco amet dolore deserunt anim proident quis nulla. Dolor occaecat anim elit aute ullamco voluptate eu eu nisi. Sunt aliqua deserunt excepteur commodo qui elit esse ex qui quis velit ut proident. Mollit tempor culpa quis ad excepteur nostrud. Deserunt ea ipsum mollit veniam ullamco incididunt ut aliqua magna excepteur. Nisi officia adipisicing in reprehenderit id ipsum laboris non occaecat deserunt fugiat.</p>
+          <p>Lorem pariatur ullamco amet dolore deserunt anim proident quis nulla. Dolor occaecat anim elit aute ullamco voluptate eu eu nisi. Sunt aliqua deserunt excepteur commodo qui elit esse ex qui quis velit ut proident. Mollit tempor culpa quis ad excepteur nostrud. Deserunt ea ipsum mollit veniam ullamco incididunt ut aliqua magna excepteur. Nisi officia adipisicing in reprehenderit id ipsum laboris non occaecat deserunt fugiat.</p>
+          <p>Lorem pariatur ullamco amet dolore deserunt anim proident quis nulla. Dolor occaecat anim elit aute ullamco voluptate eu eu nisi. Sunt aliqua deserunt excepteur commodo qui elit esse ex qui quis velit ut proident. Mollit tempor culpa quis ad excepteur nostrud. Deserunt ea ipsum mollit veniam ullamco incididunt ut aliqua magna excepteur. Nisi officia adipisicing in reprehenderit id ipsum laboris non occaecat deserunt fugiat.</p>
+          <p>Lorem pariatur ullamco amet dolore deserunt anim proident quis nulla. Dolor occaecat anim elit aute ullamco voluptate eu eu nisi. Sunt aliqua deserunt excepteur commodo qui elit esse ex qui quis velit ut proident. Mollit tempor culpa quis ad excepteur nostrud. Deserunt ea ipsum mollit veniam ullamco incididunt ut aliqua magna excepteur. Nisi officia adipisicing in reprehenderit id ipsum laboris non occaecat deserunt fugiat.</p>
+          <p>Lorem pariatur ullamco amet dolore deserunt anim proident quis nulla. Dolor occaecat anim elit aute ullamco voluptate eu eu nisi. Sunt aliqua deserunt excepteur commodo qui elit esse ex qui quis velit ut proident. Mollit tempor culpa quis ad excepteur nostrud. Deserunt ea ipsum mollit veniam ullamco incididunt ut aliqua magna excepteur. Nisi officia adipisicing in reprehenderit id ipsum laboris non occaecat deserunt fugiat.</p>
+          <p>Lorem pariatur ullamco amet dolore deserunt anim proident quis nulla. Dolor occaecat anim elit aute ullamco voluptate eu eu nisi. Sunt aliqua deserunt excepteur commodo qui elit esse ex qui quis velit ut proident. Mollit tempor culpa quis ad excepteur nostrud. Deserunt ea ipsum mollit veniam ullamco incididunt ut aliqua magna excepteur. Nisi officia adipisicing in reprehenderit id ipsum laboris non occaecat deserunt fugiat.</p>
+          <p>Lorem pariatur ullamco amet dolore deserunt anim proident quis nulla. Dolor occaecat anim elit aute ullamco voluptate eu eu nisi. Sunt aliqua deserunt excepteur commodo qui elit esse ex qui quis velit ut proident. Mollit tempor culpa quis ad excepteur nostrud. Deserunt ea ipsum mollit veniam ullamco incididunt ut aliqua magna excepteur. Nisi officia adipisicing in reprehenderit id ipsum laboris non occaecat deserunt fugiat.</p>
+          <p>Lorem pariatur ullamco amet dolore deserunt anim proident quis nulla. Dolor occaecat anim elit aute ullamco voluptate eu eu nisi. Sunt aliqua deserunt excepteur commodo qui elit esse ex qui quis velit ut proident. Mollit tempor culpa quis ad excepteur nostrud. Deserunt ea ipsum mollit veniam ullamco incididunt ut aliqua magna excepteur. Nisi officia adipisicing in reprehenderit id ipsum laboris non occaecat deserunt fugiat.</p>
+          <p>Id ad ad exercitation consequat ea ad sint do veniam duis officia laborum nostrud. Laborum ea sunt tempor veniam occaecat voluptate fugiat duis dolor. Id pariatur nostrud eu minim cillum irure non nulla et ad ex incididunt labore. Labore ex Lorem et et nisi. Ex et nulla ullamco excepteur ea nisi cupidatat non eu elit qui nostrud proident.</p>
+          <p>Id ad ad exercitation consequat ea ad sint do veniam duis officia laborum nostrud. Laborum ea sunt tempor veniam occaecat voluptate fugiat duis dolor. Id pariatur nostrud eu minim cillum irure non nulla et ad ex incididunt labore. Labore ex Lorem et et nisi. Ex et nulla ullamco excepteur ea nisi cupidatat non eu elit qui nostrud proident.</p>
+          <p>Id ad ad exercitation consequat ea ad sint do veniam duis officia laborum nostrud. Laborum ea sunt tempor veniam occaecat voluptate fugiat duis dolor. Id pariatur nostrud eu minim cillum irure non nulla et ad ex incididunt labore. Labore ex Lorem et et nisi. Ex et nulla ullamco excepteur ea nisi cupidatat non eu elit qui nostrud proident.</p>
+        </div>
+    </div>
+  </div>
+  <div class>
+      <h1>Footer</h1>
+      <p>Lorem pariatur ullamco amet dolore deserunt anim proident quis nulla. Dolor occaecat anim elit aute ullamco voluptate eu eu nisi. Sunt aliqua deserunt excepteur commodo qui elit esse ex qui quis velit ut proident. Mollit tempor culpa quis ad excepteur nostrud. Deserunt ea ipsum mollit veniam ullamco incididunt ut aliqua magna excepteur. Nisi officia adipisicing in reprehenderit id ipsum laboris non occaecat deserunt fugiat.</p>
+  </div>
+</body>
+</html>
