@@ -1,4 +1,4 @@
-# 이것은 주석
+# 이것은 주석!
 print("hello world")
 
 # type 함수
