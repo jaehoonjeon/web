@@ -5,3 +5,7 @@
 *.log
 *.iml
 *.pyc
+.idea
+pybo.db
+*.pyc
+__pycache__
