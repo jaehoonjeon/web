@@ -1,3 +1,9 @@
+사용자 지정하기
+git config --global user.name username
+git config --global user.email email
+
+---------------------------------------------------------------------------------------
+
 우클릭 git bash here 
 git init (이 폴더에 깃 사용)
 git remote add origin https://github.com/jaehoonjeon/web.git
@@ -16,7 +22,5 @@ git init
 git remote add origin "git address"
 git pull origin master
 
---------------------
 
-git config --global user.name username
-git config --global user.email email
+
