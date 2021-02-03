@@ -15,3 +15,8 @@ git push origin master    git에 PUSH
 git init
 git remote add origin "git address"
 git pull origin master
+
+--------------------
+
+git config --global user.name username
+git config --global user.email email
