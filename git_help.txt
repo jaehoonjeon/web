@@ -3,7 +3,6 @@ git config --global user.name username
 git config --global user.email email
 
 ---------------------------------------------------------------------------------------
-
 우클릭 git bash here 
 git init (이 폴더에 깃 사용)
 git remote add origin https://github.com/jaehoonjeon/web.git
@@ -11,7 +10,9 @@ git remote add origin https://github.com/jaehoonjeon/web.git
 git status 현재 폴더 깃 싱크 상태 보기
 
 git add . 현재 폴더 깃 변경사항 추가
+git add test.txt    test.txt 깃 추가
 git commit -m "message"  커밋
+git commit -a 변경사항 전부 커밋
 git push origin master    git에 PUSH
 
 ---------------------------------------------------------------------------------------
