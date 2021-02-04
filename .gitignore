@@ -2,6 +2,7 @@
 /django/venvs
 /flask/venvs
 /htmlcss3_javascript_jquery/nodeFiles/node_modules
+/python/python_DB/
 *.log
 *.iml
 *.pyc
@@ -9,5 +10,4 @@
 pybo.db
 *.pyc
 __pycache__
-python/python_DB/test.py
-python/python_DB/python_db.py
+
