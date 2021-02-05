@@ -2,7 +2,7 @@
 /django/venvs
 /flask/venvs
 /htmlcss3_javascript_jquery/nodeFiles/node_modules
-/python/python_DB/
+/python/python_DB/dbConfig.py
 *.log
 *.iml
 *.pyc
