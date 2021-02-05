@@ -7,7 +7,7 @@
 *.iml
 *.pyc
 .idea
-pybo.db
+*.db
 *.pyc
 __pycache__
 
